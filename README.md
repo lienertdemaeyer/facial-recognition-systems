@@ -77,6 +77,17 @@ Precision-recall curves compare the trade-off between precision and recall acros
 
 *Figure 5: Precision-Recall Curves for Multiple Systems*
 
+
+### FAR and FRR Curves with EER for Multiple Systems
+
+![image](https://github.com/user-attachments/assets/408f9c88-b137-40f0-81c7-e3cfcba4e4e7)
+
+PCA EER: 0.2538 at threshold 0.3838
+LDA EER: 0.0466 at threshold 0.3131
+DL EER: 0.0433 at threshold 0.2323
+LBP EER: 0.2358 at threshold 0.2424
+
+
 ### Validation as Identification System
 
 #### Identification Setup
