@@ -88,7 +88,7 @@ The CMC curve shows how well the system identifies an individual as you increase
 - **LDA and DL**: Steepest curves, indicating near-perfect identification rates early in the rank list.
 - **PCA and LBP**: Gradual rise in CMC curves, requiring more candidates to achieve similar identification rates as LDA and DL.
 
-<img src="https://github.com/user-attachments/assets/f1f06c2a-27d3-47c8-a434-a35fda7a893f" width="70%" height="70%">  
+![image](https://github.com/user-attachments/assets/c2df5051-7f52-40a8-aa3b-c3ddf67b1fbf)
 
 *Figure 6: Cumulative Matching Characteristic (CMC) Curves*
 
