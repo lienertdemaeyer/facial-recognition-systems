@@ -104,8 +104,6 @@ The table below shows the Equal Error Rate (EER) values and corresponding thresh
 | DL     | 0.0433 | 0.2323    |
 | LBP    | 0.2358 | 0.2424    |
 
-### Analysis
-
 From the table, it is evident that the **DL (Deep Learning)** method achieves the lowest EER of **0.0433**, indicating the best performance among the four methods. The second-best result is achieved by **LDA (Linear Discriminant Analysis)** with an EER of **0.0466**. Both PCA and LBP have significantly higher EERs, with PCA having an EER of **0.2538** and LBP an EER of **0.2358**, suggesting these methods are less effective in minimizing error.
 
 In summary, **DL** demonstrates the highest accuracy for this biometric verification task, followed closely by **LDA**. These results show that more advanced techniques, such as deep learning, are better suited for reducing errors in biometric systems compared to traditional methods like PCA and LBP.
