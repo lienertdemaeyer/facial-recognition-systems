@@ -7,17 +7,32 @@ This project explores facial recognition using PCA, LDA, LBP, and deep learning 
 
 ## Feature Extraction
 
-### Eigenfaces for Face Recognition
-The Eigenfaces method uses Principal Component Analysis (PCA) to reduce the dimensionality of facial images. This approach projects the images into a lower-dimensional space, enabling efficient face comparison. Eigenfaces are effective in scenarios where variations in lighting and facial expression need to be minimized, and they offer high recognition accuracy in controlled environments.
+### Feature Extraction
 
-### Fisherfaces for Face Recognition
-Fisherfaces use Linear Discriminant Analysis (LDA), a technique that seeks to maximize the separation between different facial identities while minimizing variation within a single identity. Fisherfaces offer better performance compared to Eigenfaces when dealing with varying lighting conditions and expressions, making them suitable for more realistic recognition scenarios.
+#### Eigenfaces for Face Recognition
 
-### LBP for Face Recognition
-Local Binary Patterns (LBP) is a texture-based feature descriptor that captures the local structure of an image by comparing each pixel with its surrounding neighborhood. It is particularly effective in face recognition because of its robustness to lighting variations and facial alignment. The LBP histograms generated for each face are compared using the chi-squared distance to determine similarity.
+The Eigenfaces method uses Principal Component Analysis (PCA) to reduce the dimensionality of facial images. Introduced by Kirby and Sirovich in 1987, it represents faces as linear combinations of eigenvectors derived from the face dataset, known as eigenfaces. This method involves collecting a dataset of aligned face images, applying an eigenvalue decomposition, and keeping the eigenvectors with the largest corresponding eigenvalues. Recognition is performed by projecting new face images into this eigenface space and comparing them using distance metrics like Euclidean distance, often treating face identification as a k-Nearest Neighbor classification problem. Although initially designed for face recognition, the Eigenfaces algorithm can be applied to any object classification task involving similar datasets, such as identifying bicycles, cans of soup, or ancient coins.
 
-### Deep Metric Learning
-Deep metric learning involves training neural networks to learn an embedding space where facial images of the same person are mapped closely together, and images of different people are far apart. This is often done using loss functions like contrastive or triplet loss. Deep learning methods typically outperform traditional approaches, especially in large datasets or unconstrained environments.
+#### Fisherfaces for Face Recognition
+
+Fisherfaces employ Linear Discriminant Analysis (LDA) to find a subspace that maximizes the separation between different classes while minimizing variation within the same class. Based on R.A. Fisher's work from 1936, this method generates basis vectors called Fisherfaces. Unlike PCA, which focuses on representation, LDA aims at classification by finding a subspace that maps sample vectors of the same class to a single spot in the feature representation while separating different classes as much as possible. Fisherfaces are particularly effective for classification tasks like face recognition under varying lighting conditions and expressions, as they enhance class separability. This approach often outperforms Eigenfaces in more realistic recognition scenarios where lighting and facial expressions vary.
+
+#### LBP for Face Recognition
+
+Local Binary Patterns (LBP) are texture descriptors that capture local image structure by comparing each pixel with its neighboring pixels to form a binary code. Introduced by Ojala et al. in their 2002 paper, LBPs provide a local representation of texture that is robust to lighting variations and facial misalignments. Unlike global texture descriptors like Haralick texture features, LBPs compute a local representation by comparing each pixel with its surrounding neighborhood. In face recognition, images are represented as histograms of LBP codes, which are then compared using distance metrics like chi-squared distance to determine similarity. The LBP method is particularly effective due to its ability to capture fine details and its relative invariance to monotonic gray-level changes caused by illumination variations.
+
+#### Deep Metric Learning
+
+Deep Metric Learning trains deep neural networks to map facial images into a feature space where images of the same person are close together, and those of different people are far apart. Key approaches include:
+
+1. DeepFace (2014): Developed by Facebook, it uses a Convolutional Neural Network (CNN) combined with a 3D alignment process. Trained on a large dataset of 4.4 million images of 4,000 individuals, it learns embedded representations that generalize well to other datasets. DeepFace achieved over 97% accuracy on the Labeled Faces in the Wild (LFW) dataset, approaching human-level performance.
+
+2. FaceNet/OpenFace: Developed by Google, it utilizes a triplet loss function during training. The triplet loss ensures that an anchor image is closer to a positive image (same identity) than to a negative image (different identity) by at least a specified margin. This method achieves high accuracy on benchmarks like the LFW dataset. FaceNet was trained on an enormous dataset of 200 million face images of about 8 million different identities.
+
+3. Siamese Networks: These networks consist of two identical subnetworks with shared weights that process pairs of images. Trained using contrastive loss, they minimize the distance between embeddings of the same class and maximize the distance between different classes. Siamese networks are particularly effective for one-shot learning scenarios with few samples per class or dynamically changing numbers of subjects.
+
+Implementations like Dlib's face_recognition module use these deep metric learning techniques to map faces into a 128-dimensional embedding space. When using a distance threshold of 0.6, the Dlib model achieves 99.38% accuracy on the LFW benchmark, comparable to other state-of-the-art methods as of February 2017. This approach allows for highly accurate face recognition and verification tasks.
+
 
 ## Evaluation
 
