@@ -78,14 +78,23 @@ Precision-recall curves compare the trade-off between precision and recall acros
 *Figure 5: Precision-Recall Curves for Multiple Systems*
 
 
-### FAR and FRR Curves with EER for Multiple Systems
+### Equal Error Rate (EER) Results
 
-![image](https://github.com/user-attachments/assets/408f9c88-b137-40f0-81c7-e3cfcba4e4e7)
+The table below shows the Equal Error Rate (EER) values and corresponding thresholds for the four methods (PCA, LDA, DL, LBP) used in the analysis. The EER is the point where the False Acceptance Rate (FAR) and False Rejection Rate (FRR) are equal, which is a critical metric for evaluating the performance of biometric or verification systems. A lower EER indicates better performance as it represents a lower overall error.
 
-PCA EER: 0.2538 at threshold 0.3838
-LDA EER: 0.0466 at threshold 0.3131
-DL EER: 0.0433 at threshold 0.2323
-LBP EER: 0.2358 at threshold 0.2424
+| Method | EER  | Threshold |
+|--------|------|-----------|
+| PCA    | 0.2538 | 0.3838    |
+| LDA    | 0.0466 | 0.3131    |
+| DL     | 0.0433 | 0.2323    |
+| LBP    | 0.2358 | 0.2424    |
+
+### Analysis
+
+From the table, it is evident that the **DL (Deep Learning)** method achieves the lowest EER of **0.0433**, indicating the best performance among the four methods. The second-best result is achieved by **LDA (Linear Discriminant Analysis)** with an EER of **0.0466**. Both PCA and LBP have significantly higher EERs, with PCA having an EER of **0.2538** and LBP an EER of **0.2358**, suggesting these methods are less effective in minimizing error.
+
+In summary, **DL** demonstrates the highest accuracy for this biometric verification task, followed closely by **LDA**. These results show that more advanced techniques, such as deep learning, are better suited for reducing errors in biometric systems compared to traditional methods like PCA and LBP.
+
 
 
 ### Validation as Identification System
