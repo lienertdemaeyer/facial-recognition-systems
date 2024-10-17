@@ -71,11 +71,16 @@ The F1 score and accuracy were computed across varying thresholds for each syste
 - **LDA**: Second highest F1 score and accuracy.
 - **DL and LBP**: Lower F1 and accuracy scores compared to PCA and LDA.
 
-Optimal F1 thresholds for each system:  
-- PCA = 0.202  
-- LDA = 0.182  
-- DL = 0.111  
-- LBP = 0.111  
+Optimal F1 thresholds for each system: 
+
+| Method | Optimal F1 Threshold |
+|--------|----------------------|
+| PCA    | 0.202                |
+| LDA    | 0.182                |
+| DL     | 0.111                |
+| LBP    | 0.111                |
+
+_**Table 3:** Optimal F1 Thresholds for Each Method_
 
 <img src="https://github.com/user-attachments/assets/c70a0892-0c3b-4f88-9f01-20a5b541e3d1" width="70%" height="70%">  
 
