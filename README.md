@@ -28,7 +28,7 @@ The verification setup in biometric systems uses two datasets: a reference set w
 #### Distance Matrix
 The verification process in this project uses a **120 by 320 distance matrix**, where 120 verification images are compared against 320 reference images. The reference set was used to train models like PCA (Eigenfaces), and the distance matrix captures the similarity between the verification and reference images.
 
-![image](https://github.com/user-attachments/assets/e66b8755-f2ae-4fe4-be7f-e59b1d41f962)  
+<img src="https://github.com/user-attachments/assets/e66b8755-f2ae-4fe4-be7f-e59b1d41f962" width="50%" height="50%">  
 *Figure 2: Distance Matrix Setup*
 
 - **120 verification set**  
@@ -59,7 +59,7 @@ Optimal F1 thresholds for each system:
 - DL = 0.111  
 - LBP = 0.111  
 
-![image](https://github.com/user-attachments/assets/c70a0892-0c3b-4f88-9f01-20a5b541e3d1)  
+<img src="https://github.com/user-attachments/assets/c70a0892-0c3b-4f88-9f01-20a5b541e3d1" width="70%" height="70%">  
 *Figure 4: F1 and Accuracy across Thresholds*
 
 #### Precision-Recall for Multiple Systems
@@ -69,7 +69,7 @@ Precision-recall curves compare the trade-off between precision and recall acros
 - **LDA**: Slightly lower performance than DL, but better than PCA and LBP.
 - **PCA and LBP**: Similar lower performance, with precision dropping as recall increases.
 
-![image](https://github.com/user-attachments/assets/320cb634-e1e8-490f-9269-dc245e0a587e)  
+<img src="https://github.com/user-attachments/assets/320cb634-e1e8-490f-9269-dc245e0a587e" width="70%" height="70%">  
 *Figure 5: Precision-Recall Curves for Multiple Systems*
 
 ### Validation as Identification System
@@ -83,7 +83,7 @@ The CMC curve shows how well the system identifies an individual as you increase
 - **LDA and DL**: Steepest curves, indicating near-perfect identification rates early in the rank list.
 - **PCA and LBP**: Gradual rise in CMC curves, requiring more candidates to achieve similar identification rates as LDA and DL.
 
-![image](https://github.com/user-attachments/assets/f1f06c2a-27d3-47c8-a434-a35fda7a893f)  
+<img src="https://github.com/user-attachments/assets/f1f06c2a-27d3-47c8-a434-a35fda7a893f" width="70%" height="70%">  
 *Figure 6: Cumulative Matching Characteristic (CMC) Curves*
 
 - **Rank-1 Performance:**
